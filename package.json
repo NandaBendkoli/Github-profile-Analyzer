@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon inedx.js",
+    "dev": "nodemon inedx.js",
     "start": "node index.js"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axios": "^1.18.1",
     "chalk": "^5.6.2",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
