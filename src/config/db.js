@@ -1,19 +1,14 @@
 import mysql from "mysql2/promise";
-import env from "dotenv";
+import dotenv from "dotenv";
 import chalk from "chalk";
 env.config();
-const host = process.env.DB_HOST;
-const root = process.env.DB_USER;
-const password = process.env.DB_PASSWORD;
-const database = process.env.DB_NAME;
-const db_port = process.env.DB_PORT;
 
 const db = await mysql.createConnection({
-    host,
-    user: root,
-    password,
-    db_port,
-    database
+    host: process.env.DB_HOST,
+    port: Number(process.env.DB_PORT),
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
 });
 
 if (!db) {
