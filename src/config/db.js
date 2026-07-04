@@ -6,7 +6,7 @@ const host = process.env.DB_HOST;
 const root = process.env.DB_USER;
 const password = process.env.DB_PASSWORD;
 const database = process.env.DB_NAME;
-const db_port = process.env.DB_PORT,
+const db_port = process.env.DB_PORT;
 
 const db = await mysql.createConnection({
     host,
